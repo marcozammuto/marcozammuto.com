@@ -1,15 +1,7 @@
 body {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100vw;
-  min-height: 100vh;
   background-color: #f4f5ff;
-  font-family: "DM Sans", sans-serif;
-  font-size: 16px;
   color: #363b53;
+  align-items: stretch;
 }
 
 p {
@@ -105,6 +97,7 @@ h1 {
   top: 0;
   left: 0;
   width: 100%;
+  border-bottom: 30px;
 }
 
 #fields-wrap {
@@ -123,4 +116,31 @@ h1 {
 #bio-text, #bio-wrap {
      width: 80vw;
      text-align: left;
+}
+
+/* Store */
+
+#store-heading-text {
+  display: flex;
+  justify-content: center;
+}
+
+#quotes-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#quotes-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#quotes-wrap:nth-child(even) {
+  text-align: left;
+}
+
+#teaching-skills-wrap {
+  width: 75vw;
 }
