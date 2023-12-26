@@ -5,8 +5,7 @@ body {
   align-items: center;
   justify-content: center;
   width: 100vw;
-  height: 100vh;
-  min-height: 675px;
+  min-height: 100vh;
   background-color: #f4f5ff;
   font-family: "DM Sans", sans-serif;
   font-size: 16px;
@@ -101,27 +100,27 @@ h1 {
 
 #header-wrap {
   display: flex;
-  flex-direction: column;
-  text-align: left;
-  gap: 20px;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
-#mailing-list-wrap {
+#fields-wrap {
   display: flex;
+  gap: 10px;
+  text-align: left;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-}
-
-#first-name,
-#last-name {
   width: 100%;
 }
 
-#email {
-  width: 18vw;
+#email-wrap {
+  width: 220px;
 }
 
-#preferences-wrap {
-  width: 100%;
+#bio-text, #bio-wrap {
+     width: 80vw;
+     text-align: left;
 }
