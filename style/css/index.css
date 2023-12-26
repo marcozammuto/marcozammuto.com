@@ -83,7 +83,9 @@ h1 {
 }
 
 @media screen and (max-width: 580px) {
-  h1, p, .link-container {
+  h1,
+  p,
+  .link-container {
     width: 80%;
   }
 }
@@ -111,7 +113,8 @@ h1 {
   gap: 10px;
 }
 
-#first-name, #last-name {
+#first-name,
+#last-name {
   width: 100%;
 }
 
