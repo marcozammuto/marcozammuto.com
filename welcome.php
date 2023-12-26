@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Subscription Completed</title>
+    <title>Welcome!</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -54,10 +54,10 @@
     $email = $_POST["email"];
     $field = $_POST["mailing-list-field"];
 
-       // personalized message for the subscription page
+    // personalized message for the subscription page
     $personalized_message = ($field === '0') ? 
     "coding journey, my progress, and the technologies I'm exploring. I also maintain a blog where I document these experiences." : 
-    "musical journey, releases, and the genres I'm delving into. I maintain a blog where I share insights weekly.";
+    "musical journey, releases, and the genres I'm delvin  g into. I maintain a blog where I share insights weekly.";
     $mailing_list = ($field === '0') ?  'my coding mailing list' : (($field === '1') ? 'my music mailing list' : 'both my mailing lists');
     
     // checking if the email is already registered
@@ -73,6 +73,13 @@
         echo "<h2>Welcome $first_name!</h2>
         <p>You are already subscribed to my website with the following email: $email</p>
         <p>You are currently subscribed to $mailing_list, thank you for that! </p>
+        <p>Do you want a change?</p>
+        <form action="/index.html">
+        <legend>I'm interested into</legend>
+        <button>Coding</button>
+        <button>Music</button>
+        <button>Both of them</button>        
+        </form>
         <a href='index.html' class='back-link'>Back to Homepage</a>";
         die();
     }
