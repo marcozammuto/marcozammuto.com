@@ -44,18 +44,18 @@
     $password = "!Francescodipaola28";
     $database = "u709623640_Database1";
     
-    //db connection
+     //db connection
     $connection = new mysqli($host, $user, $password, $database);
     if ($connection->connect_error) {
         die("Errore di connessione: " . $connection->connect_error);
         }
-
-    //form datas
+        
+        //form datas
     $first_name = $_POST["first-name"];
     $last_name = $_POST["last-name"];
     $email = $_POST["email"];
     $field = $_POST["mailing-list-field"];
-
+    
     // personalized message for the subscription page
     $personalized_message = ($field === '0') ? 
     "coding journey, my progress, and the technologies I'm exploring. I also maintain a blog where I document these experiences." : 
@@ -78,11 +78,11 @@ if ($result_check->num_rows === 0) {
         <p>You are already subscribed to my website with the following email: $email</p>
         <p>You are currently subscribed to $mailing_list, thank you for that! </p>
         <p>How can I help you?</p>
-<form action='/index.html'>
+<form action='/update_preferences.php' method='post'>
     <legend>Send me mails about:</legend>
-    <label><input type='radio' name='mailing-list-field' value='0'>Coding</label>
-    <label><input type='radio' name='mailing-list-field' value='1'>Music</label>
-    <label><input type='radio' name='mailing-list-field' value='2'>Both</label>
+    <label><input type='radio' name='mailing-list-field' value='0' <?php if($field === 0) echo 'checked' ?>>Coding</label>
+    <label><input type='radio' name='mailing-list-field' value='1' <?php if($field === 1) echo 'checked' ?>>Music</label>
+    <label><input type='radio' name='mailing-list-field' value='2' <?php if($field === 2) echo 'checked' ?>>Both</label>
     <input type='submit' value='Update Subscription'>
 </form>
         <a href='index.html' class='back-link'>Back to Homepage</a>";
