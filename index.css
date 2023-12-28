@@ -6,9 +6,15 @@ body {
   font-family: "DM Sans", sans-serif;
   font-size: 16px;
   color: #363b53;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Home */
+
+#header-text-wrap {
+  text-align: left;
+}
 
 #music-header-wrap {
   display: flex;

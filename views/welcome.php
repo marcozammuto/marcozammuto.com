@@ -78,11 +78,11 @@ if ($result_check->num_rows === 0) {
         <p>You are already subscribed to my website with the following email: $email</p>
         <p>You are currently subscribed to $mailing_list, thank you for that! </p>
         <p>How can I help you?</p>
-<form action='/update_preferences.php' method='post'>
+<form action='views/update_preferences.php' method='post'>
     <legend>Send me mails about:</legend>
-    <label><input type='radio' name='mailing-list-field' value='0' <?php if($field === 0) echo 'checked' ?>>Coding</label>
-    <label><input type='radio' name='mailing-list-field' value='1' <?php if($field === 1) echo 'checked' ?>>Music</label>
-    <label><input type='radio' name='mailing-list-field' value='2' <?php if($field === 2) echo 'checked' ?>>Both</label>
+    <label><input type='radio' name='mailing-list-field' value='0' <?php if($field === '0') echo 'checked'; ?>Coding</label>
+    <label><input type='radio' name='mailing-list-field' value='1' <?php if($field === '1') echo 'checked'; ?>Music</label>
+    <label><input type='radio' name='mailing-list-field' value='2' <?php if($field === '2') echo 'checked'; ?>Both</label>
     <input type='submit' value='Update Subscription'>
 </form>
         <a href='index.html' class='back-link'>Back to Homepage</a>";
