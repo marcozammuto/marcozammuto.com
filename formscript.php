@@ -8,17 +8,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $mail = new PHPMailer;
 
-    $mail->isSMTP();
-    $mail->Host = 'smtp.hostinger.com';
-    $mail->Port = 465;
-    $mail->SMTPDebug = 0;
-    $mail->SMTPAuth = true;
-    $mail->SMTPSecure = 'ssl'; // Impostazione per l'utilizzo di SSL/TLS
-    $mail->Username = 'info@marcozammuto.com';
-    $mail->Password = '!Psppsp1';
-    $mail->setFrom('info@marcozammuto.com', 'Giuseppe Zammuto');
-    $mail->addAddress('mrczammuto@gmail.com', 'Ivan Poggi');
-
     $email = $_POST['email'] ?? '';
     $name = $_POST['name'] ?? '';
     $message = $_POST['message'] ?? '';
